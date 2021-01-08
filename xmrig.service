@@ -1,0 +1,11 @@
+[Unit]
+Description = Miner XMR Service
+After = rc.local.service
+
+[Service]
+Type = simple
+User = root
+Group = root
+ExecStart = /usr/local/bin/xmrig -c /etc/xmrig/config.json -l /var/log/xmrig.log
+[Install]
+WantedBy = multi-user.target
