@@ -1,30 +1,31 @@
+## description
+
+- 0 抽水
+- centos7编译
+- 快速安装启动
+
 ## Install
 
 ```
-sudo sysctl -w vm.nr_hugepages=128
-mkdir /etc/xmr-stak-rx/
-cp *.txt /etc/xmr-stak-rx/
-cp xmr-stak-rx.service /usr/lib/systemd/system
-cp xmr-stak-rx /usr/local/bin/
+./install.sh
 ```
 
 ## Start 
 
 ```
-systemctl enable xmr-stak-rx
-systemctl start xmr-stak-rx
+systemctl enable xmrig
+systemctl start xmrig
 ```
 
 ## Log
 
 ```
-tailf /var/log/xmr.log
+tailf /var/log/xmrig.log
 ```
 
 ## config
 
 ```
-ls /etc/xmr-stak-rx/
-vi /etc/xmr-stak-rx/pools.txt
+ls /etc/xmrig/
 ```
 
